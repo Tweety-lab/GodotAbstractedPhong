@@ -1,3 +1,34 @@
-[gd_scene format=3 uid="uid://ck1hukyc3fgqt"]
+[gd_scene load_steps=6 format=3 uid="uid://ck1hukyc3fgqt"]
+
+[ext_resource type="Shader" path="res://Shaders/phong.gdshader" id="1_fsv62"]
+[ext_resource type="Texture2D" uid="uid://di06bqdiya1lq" path="res://Shaders/brick-wall-texture.jpg" id="2_t7lgn"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_e14aa"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k08fb"]
+render_priority = 0
+shader = ExtResource("1_fsv62")
+shader_parameter/Texture = ExtResource("2_t7lgn")
+
+[sub_resource type="Environment" id="Environment_s5nn8"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(0.217101, 0.217101, 0.217101, 1)
 
 [node name="ExampleScene" type="Node3D"]
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.413926, 0.431496, 0.779471)
+light_color = Color(0.663824, 0.663824, 0.663824, 1)
+light_specular = 0.81
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+mesh = SubResource("SphereMesh_e14aa")
+material = SubResource("ShaderMaterial_k08fb")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_s5nn8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0806154, 0.159671, 1.19585)
+light_energy = 0.0

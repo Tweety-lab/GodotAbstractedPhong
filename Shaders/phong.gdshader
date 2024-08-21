@@ -1,14 +1,19 @@
 shader_type spatial;
 
-void vertex() {
-	// Called for every vertex the material is visible on.
-}
+uniform sampler2D Texture;
 
-void fragment() {
-	// Called for every pixel the material is visible on.
+void light() {
+	// Sample the texture at the current UV coordinates
+	vec4 texColor = texture(Texture, UV);
+	
+	// Diffuse
+	float diffuseFactor = max(0.0, dot(LIGHT, NORMAL));
+	vec3 diffuse = diffuseFactor * LIGHT_COLOR;
+	DIFFUSE_LIGHT += diffuse * texColor.rgb;
+	
+	// Specular
+	vec3 reflectDir = normalize(reflect(-LIGHT, NORMAL));
+	float specularFactor = max(0.0, dot(VIEW, reflectDir));
+	specularFactor = pow(specularFactor, SPECULAR_AMOUNT);
+	SPECULAR_LIGHT += specularFactor * LIGHT_COLOR;
 }
-
-//void light() {
-	// Called for every pixel for every light affecting the material.
-	// Uncomment to replace the default light processing function with this one.
-//}
