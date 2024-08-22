@@ -18,8 +18,8 @@ ambient_light_color = Color(0.369107, 0.369107, 0.369107, 1)
 [node name="ExampleScene" type="Node3D"]
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.413926, 0.431496, -1.03091)
-light_color = Color(0.489502, 0.502552, 0.48306, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.413926, 0.431496, -1.2644)
+light_color = Color(0.362029, 0.533763, 0.540453, 1)
 light_specular = 0.81
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="."]
