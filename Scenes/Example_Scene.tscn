@@ -8,6 +8,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k08fb"]
 render_priority = 0
 shader = ExtResource("1_fsv62")
+shader_parameter/Specular = 32.0
 shader_parameter/Texture = ExtResource("2_t7lgn")
 
 [sub_resource type="Environment" id="Environment_s5nn8"]
@@ -18,14 +19,9 @@ ambient_light_color = Color(0.369107, 0.369107, 0.369107, 1)
 [node name="ExampleScene" type="Node3D"]
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.413926, 0.431496, -1.2644)
-light_color = Color(0.362029, 0.533763, 0.540453, 1)
-light_specular = 0.81
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.604432, 0.431496, 0.434312)
-light_color = Color(0.489502, 0.502552, 0.48306, 1)
-light_specular = 0.81
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.413926, 0.431496, -1.38885)
+light_color = Color(0.731261, 0.713092, 0.726999, 1)
+omni_range = 1.298
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.600265, 0, 0)

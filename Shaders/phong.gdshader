@@ -1,6 +1,7 @@
 shader_type spatial;
 
 uniform sampler2D Texture;
+uniform float Specular;
 
 void fragment() {
 	// Apply texture
@@ -21,6 +22,6 @@ void light() {
 	// Specular
 	vec3 reflectDir = normalize(reflect(-LIGHT, NORMAL));
 	float specularFactor = max(0.0, dot(VIEW, reflectDir));
-	specularFactor = pow(specularFactor, SPECULAR_AMOUNT);
+	specularFactor = pow(max(dot(VIEW, reflectDir), 0.0), Specular);
 	SPECULAR_LIGHT += specularFactor * LIGHT_COLOR;
 }
