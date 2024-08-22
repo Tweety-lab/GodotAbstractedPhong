@@ -3,7 +3,7 @@
 
  # Features
  - Texture Support
- - Ambient Colour Support
+ - World Environment Ambient Colour Support
  - Plug and Play implementation with Godot's lights
 
 # Showcase
