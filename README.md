@@ -7,3 +7,4 @@
  - Plug and Play implementation with Godot's lights
 
 # Showcase
+![Phong Example](Showcase/phong.png)
