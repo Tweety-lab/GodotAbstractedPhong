@@ -29,7 +29,7 @@ ambient_light_color = Color(0.231518, 0.231518, 0.231518, 1)
 [node name="ExampleScene" type="Node3D"]
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90942, 0.0604637, -1.72281)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.215, -0.379026, -2.23185)
 height = 1.83633
 sides = 16
 material = SubResource("ShaderMaterial_bqgf5")
@@ -40,7 +40,7 @@ light_color = Color(0.693891, 0.260184, 0.404945, 1)
 omni_range = 20.0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.171845, 0.854089, -0.726543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.66964, 0.263573, -0.726543)
 light_color = Color(0.128569, 0.499358, 0.45623, 1)
 omni_range = 20.0
 
