@@ -5,7 +5,6 @@
  - Texture Support
  - World Environment Ambient Colour Support
  - Plug and Play implementation with Godot's lights
-   
   - Light Colour
   - Attenuation
   - Range
