@@ -8,4 +8,5 @@
 
 # Showcase
 ( 3 Light sources, Red Green and Blue. )
+
 ![Phong Example](Showcase/phong.png)
