@@ -5,10 +5,11 @@
  - Texture Support
  - World Environment Ambient Colour Support
  - Plug and Play implementation with Godot's lights
-   - Light Colour
-   - Attenuation
-   - Range
-   - Energy
+   
+  - Light Colour
+  - Attenuation
+  - Range
+  - Energy
 
 # Showcase
 ( 3 Light sources, Red Green and Blue. )
