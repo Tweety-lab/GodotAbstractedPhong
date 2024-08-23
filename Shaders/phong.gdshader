@@ -16,12 +16,13 @@ void light() {
 	
 	// Diffuse
 	float diffuseFactor = max(0.0, dot(LIGHT, NORMAL));
-	vec3 diffuse = diffuseFactor * LIGHT_COLOR;
+	vec3 diffuse = diffuseFactor * LIGHT_COLOR * ATTENUATION;
 	DIFFUSE_LIGHT += diffuse;
 	
 	// Specular
 	vec3 reflectDir = normalize(reflect(-LIGHT, NORMAL));
 	float specularFactor = max(0.0, dot(VIEW, reflectDir));
 	specularFactor = pow(max(dot(VIEW, reflectDir), 0.0), Specular);
-	SPECULAR_LIGHT += specularFactor * LIGHT_COLOR;
+	vec3 specular = specularFactor * LIGHT_COLOR * ATTENUATION;
+	SPECULAR_LIGHT += specular;
 }
