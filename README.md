@@ -1,5 +1,5 @@
 # Godot Abstracted Phong
- Godot Phong shader written from scratch, mostly as a learning experience.
+A Phong shader for Godot, built from scratch primarily as a learning exercise and for use in creating retro-style games.
 
  ## Features
  - Texture Support
