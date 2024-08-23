@@ -4,6 +4,7 @@
  # Features
  - Texture Support
  - World Environment Ambient Colour Support
+ - Supports 8 Active Lights per Object
  - Plug and Play implementation with Godot's lights
    
    - Light Colour
@@ -15,3 +16,7 @@
 ( 3 Light sources, Red Green and Blue. )
 
 ![Phong Example](Showcase/phong.png)
+
+( 8 Active Lights on one Mesh)
+
+![Phong Example](Showcase/phong_8.png)
