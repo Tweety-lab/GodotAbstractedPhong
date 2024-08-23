@@ -17,7 +17,7 @@
 
 ![Phong Example](Showcase/phong.png)
 
-( 8 Active Lights on one Mesh)
+( 8 Active Lights )
 
 ![8 Active Lights](Showcase/phong_8.png)
 
