@@ -1,7 +1,7 @@
 # Godot Abstracted Phong
  Godot Phong shader written from scratch, mostly as a learning experience.
 
- # Features
+ ## Features
  - Texture Support
  - World Environment Ambient Colour Support
  - Supports 8 Active Lights per Object
