@@ -34,8 +34,18 @@ height = 1.83633
 material = SubResource("ShaderMaterial_bqgf5")
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99212, 0.162927, -3.96484)
-light_color = Color(0.448809, 0.428419, 0.444086, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.44022, 0.162927, -1.6714)
+light_color = Color(0.693891, 0.260184, 0.404945, 1)
+omni_range = 20.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.171845, 0.854089, -0.726543)
+light_color = Color(0.128569, 0.499358, 0.45623, 1)
+omni_range = 20.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.798316, 0.854089, -2.06316)
+light_color = Color(0.20271, 0.328327, 1, 1)
 omni_range = 20.0
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
