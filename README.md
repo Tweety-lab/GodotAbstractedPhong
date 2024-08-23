@@ -19,4 +19,4 @@
 
 ( 8 Active Lights on one Mesh)
 
-![Phong Example](Showcase/phong_8.png)
+![8 Active Lights](Showcase/phong_8.png)
