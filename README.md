@@ -11,6 +11,7 @@ A Phong shader for Godot, built from scratch primarily as a learning exercise an
    - Attenuation
    - Range
    - Energy
+   - Shadows
 
 ## Showcase
 ( 3 Light sources, Red Green and Blue. )
