@@ -5,9 +5,8 @@ uniform float Specular;
 
 void fragment() {
 	// Apply texture
-    vec4 albedo_tex = texture(Texture, UV);
-    ALBEDO = albedo_tex.rgb;
-    ALPHA = albedo_tex.a;
+	vec4 albedo_tex = texture(Texture, UV);
+	ALBEDO = albedo_tex.rgb;
 }
 
 void light() {

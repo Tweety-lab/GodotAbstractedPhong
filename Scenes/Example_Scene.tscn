@@ -29,7 +29,7 @@ ambient_light_color = Color(0.231518, 0.231518, 0.231518, 1)
 [node name="ExampleScene" type="Node3D"]
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.215, -0.379026, -2.23185)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.215, -0.571806, -2.23185)
 height = 1.83633
 sides = 16
 material = SubResource("ShaderMaterial_bqgf5")
@@ -68,3 +68,11 @@ light_energy = 0.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, 3.08858, 0.59645, -1.20667)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(13.1415, 0, 0, 0, 1, 0, 0, 0, 17.8846, 0.124246, -1.93498, -2.58205)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.795421, 0.606058, 0, -0.606058, 0.795421, 0.536199, 0.946931, 0.896379)
+shadow_enabled = true
+spot_range = 19.885
