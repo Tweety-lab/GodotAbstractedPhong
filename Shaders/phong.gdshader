@@ -2,6 +2,7 @@ shader_type spatial;
 
 uniform sampler2D Texture;
 uniform float Specular;
+uniform bool Blinn;
 
 void fragment() {
 	// Apply texture
@@ -19,9 +20,13 @@ void light() {
 	DIFFUSE_LIGHT += diffuse;
 	
 	// Specular
-	vec3 reflectDir = normalize(reflect(-LIGHT, NORMAL));
-	float specularFactor = max(0.0, dot(VIEW, reflectDir));
-	specularFactor = pow(max(dot(VIEW, reflectDir), 0.0), Specular);
+	vec3 halfDir;
+	if (Blinn) {
+		halfDir = normalize(LIGHT + VIEW);
+	} else {
+		halfDir = normalize(reflect(-LIGHT, NORMAL));
+	}
+	float specularFactor = pow(max(dot(NORMAL, halfDir), 0.0), Specular);
 	vec3 specular = specularFactor * LIGHT_COLOR * ATTENUATION;
 	SPECULAR_LIGHT += specular;
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ck1hukyc3fgqt"]
+[gd_scene load_steps=9 format=3 uid="uid://ck1hukyc3fgqt"]
 
 [ext_resource type="Shader" path="res://Shaders/phong.gdshader" id="1_fsv62"]
 [ext_resource type="Texture2D" uid="uid://di06bqdiya1lq" path="res://Shaders/brick-wall-texture.jpg" id="2_t7lgn"]
@@ -7,6 +7,7 @@
 render_priority = 0
 shader = ExtResource("1_fsv62")
 shader_parameter/Specular = 100.0
+shader_parameter/Blinn = null
 
 [sub_resource type="SphereMesh" id="SphereMesh_e14aa"]
 
@@ -14,17 +15,25 @@ shader_parameter/Specular = 100.0
 render_priority = 0
 shader = ExtResource("1_fsv62")
 shader_parameter/Specular = 32.0
+shader_parameter/Blinn = true
 shader_parameter/Texture = ExtResource("2_t7lgn")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_aw45j"]
 render_priority = 0
 shader = ExtResource("1_fsv62")
 shader_parameter/Specular = 32.0
+shader_parameter/Blinn = null
 
 [sub_resource type="Environment" id="Environment_s5nn8"]
 background_mode = 1
 ambient_light_source = 2
 ambient_light_color = Color(0.231518, 0.231518, 0.231518, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wlmaw"]
+render_priority = 0
+shader = ExtResource("1_fsv62")
+shader_parameter/Specular = 32.0
+shader_parameter/Blinn = true
 
 [node name="ExampleScene" type="Node3D"]
 
@@ -71,6 +80,7 @@ transform = Transform3D(-5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, 3.0885
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(13.1415, 0, 0, 0, 1, 0, 0, 0, 17.8846, 0.124246, -1.93498, -2.58205)
+material = SubResource("ShaderMaterial_wlmaw")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.795421, 0.606058, 0, -0.606058, 0.795421, 0.536199, 0.946931, 0.896379)
